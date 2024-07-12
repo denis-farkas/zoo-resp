@@ -1,0 +1,89 @@
+.recherche-animaux {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 40px auto;
+    background-color: white;
+    justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(7, 48, 7);
+  }
+  .bloc-titres{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+  }
+  .bloc-paragraphes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 10px
+  
+  }.yellow-dark {
+      background-color: rgb(227, 178, 87);
+      color: black;
+    
+    }
+    .black{
+      background-color: #000;
+      color:white;
+    }
+    .bloc-image image{
+      
+      display: flex;
+      
+      justify-content: center;
+      align-items: center;
+      width: 350px;
+      height: 350px;
+      margin: 10px;
+      padding: 10px; 
+    
+    }
+    
+    
+    
+    .bloc-style{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 380px;
+      height: 400px;
+      margin:10px;
+    }
+    .bloc-titres{
+      font-size: 2em;
+      font-weight: bold;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+    }
+    .photo-conservation{
+      width: 100%;
+      height: 90%;
+    }
+    .photo-soin{
+      width: 300px;
+      height: 150px;
+    }
+    .photo-dentiste{
+      width: 350px;
+      height: 150px;
+    }
+    .photo-intervention{
+      width: 350px;
+      height: 160px;
+    }
+    
+  
+      
+    
+   
+    

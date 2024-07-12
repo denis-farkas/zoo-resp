@@ -1,0 +1,6 @@
+@media only screen and (max-width: 1025px) {
+  .thumb-card {
+    width: 325px;
+    height: auto;
+  }
+}

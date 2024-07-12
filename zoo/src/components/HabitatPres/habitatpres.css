@@ -1,0 +1,36 @@
+
+.habitat-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+}
+.habitat-title{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.habitat-title h1 {
+    color: #0f0e0e;
+    
+}
+.habitat-texte {
+    width: 45%;
+    display:flex;  
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-wrap: nowrap;   
+}
+.habitat-photo {  
+    width: 45%;
+}
+.habitat-photo img {
+    width: 70%;
+    height:auto;
+}
+.habitat-para { 
+    padding: 10px; 
+}

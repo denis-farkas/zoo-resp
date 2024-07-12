@@ -1,0 +1,68 @@
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.mission-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+.mission-card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 100%;
+}
+.mission-card-body img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.mission-card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  font-size: small;
+}
+.mission-card-footer p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(18, 91, 117);
+}
+.mission-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-mission {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.mission-card-body p {
+  font-size: 1rem;
+  color: #656060;
+}

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1025px) {
+  .section-habitat {
+    flex-wrap: wrap;
+  }
+  .section-habitat-intro {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .section-habitat-left {
+    width: 100%;
+    flex-wrap: wrap;
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}

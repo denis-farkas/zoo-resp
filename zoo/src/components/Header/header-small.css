@@ -1,0 +1,11 @@
+@media only screen and (max-width: 760px) {
+  .navbar-collapse .navbar-nav {
+    width: 150px;
+
+    height: auto;
+    margin: 20px 10px;
+    text-align: center;
+    background-color: rgba(159, 243, 159, 0.562);
+    border-radius: 10px;
+  }
+}

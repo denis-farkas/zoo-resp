@@ -1,0 +1,34 @@
+.section-mission {
+  background-image: url("../../../public/image/vert3.jpeg");
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 600px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 10px;
+  margin: 40px;
+  flex-wrap: wrap;
+}
+.mission-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+}
+.mission-service {
+  display: flex;
+  text-align: center;
+}
+.mission-jumbotron {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 400px;
+}

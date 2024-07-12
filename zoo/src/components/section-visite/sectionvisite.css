@@ -1,0 +1,103 @@
+.visite-service {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 10px;
+  background-color: white;
+  justify-content: space-between;
+  padding: 10px;
+}
+.bloc-title-visite-guidee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.bloc-para-visite-guidee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.grey {
+  background-color: rgb(225, 221, 221);
+  color: black;
+}
+.white {
+  background-color: #000;
+  color: white;
+}
+.bloc-img img {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 20% 10%;
+  width: 350px;
+  height: 320px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.bloc-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20% 10%;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+}
+.bloc-horaire-visite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 20% 10%;
+}
+.img-two {
+  border-radius: 20% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://th.bing.com/th/id/R.9cc2f81633018ea0e1d6c863b69f4079?rik=cyN0RDW40lXTMw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-SF_2xzIY4xY%2fUAWKgEy8pyI%2fAAAAAAAAEbw%2fXTiIOUC8EK8%2fs1600%2flions-roaring-1.JPG&ehk=uyHbqxHH4RK3fzfo%2fC7a7JuRLfYRoGYqp%2bSI4LPF3Z4%3d&risl=&pid=ImgRaw&r=0");
+}
+
+@media only screen and (max-width: 1025px) {
+  .bloc-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-around;
+    width: 90%;
+    margin: 10px auto;
+    height: auto;
+  }
+  .bloc-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .bloc-img .bloc-text {
+    width: 100%;
+  }
+
+  .bloc-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .visite-service {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

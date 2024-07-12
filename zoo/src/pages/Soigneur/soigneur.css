@@ -1,0 +1,46 @@
+.first-soigneur {
+    background-color:rgb(46, 181, 46);
+    font-size: medium;
+    margin: 50px;}
+
+.title.soigneur {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.container-soigneur {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}   
+.text-soigneur {
+    display: flex;
+    padding: 80px;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 50%;}
+.photo {    width: 50%;
+    margin: 50px;
+ }
+
+    .intro-soigneur {   font-size: 20px;
+    margin-bottom: 20px;}
+
+    .photo-soigneur {
+        width: 50%;
+        margin: 50px;
+        
+
+    }
+
+    .photo-soigneur img {
+        width: 100%;
+        height: 100%;
+    }
+    .btn btn-success{
+        padding: 10px;
+    }
+    
+    
+    

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1025px) {
+  .mission-card {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+    margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .mission-card {
+    max-width: 380px;
+  }
+}

@@ -1,0 +1,89 @@
+.section-education {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 30px auto;
+  background-color: white;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+}
+.title-education {
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.whiter {
+  color: white;
+}
+.bloc-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.bloc-para {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.yellow-dark {
+  background-color: rgb(227, 178, 87);
+  color: black;
+}
+.black {
+  background-color: #000;
+  color: white;
+}
+.bloc-foto .foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  margin: 10px;
+  padding: 10px;
+}
+.oeuf-serpent {
+  width: 400px;
+  height: 180px;
+  padding: 10px;
+}
+
+.bloc-write-education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  margin: 10px;
+}
+.bloc-first {
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-petitigre {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 400px;
+  height: 250px;
+  padding: 20px;
+}
+.photo-lione {
+  width: 100%;
+  height: 80%;
+}

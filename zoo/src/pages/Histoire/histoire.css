@@ -1,0 +1,233 @@
+.body-first {
+    background-color:rgb(46, 181, 46);
+    font-size: medium;
+    margin: 50px;
+}
+.actualite-container{
+    background-color: rgb(168, 167, 230);
+    font-size: medium;
+    
+}
+.title-histo {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 20px;
+ }
+          
+.container-histoire {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}   
+.text {
+    display: flex;
+    padding: 80px;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 50%;
+}
+          
+          
+.photo {
+    width: 50%;
+    margin: 50px;
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-histoire{
+
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;    
+
+}
+.title-histo2 {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.visite-guidées1 {
+    font: size 30px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.text-histoire{
+    display: flex;
+    padding: 80px;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 70%;
+}
+.container-histoire1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.photo-visite-guidée {
+    width: 50%;
+}
+.title-histo2 {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+.naissance {
+    font: size 30px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.text-histoire1{
+    display: flex;
+    padding: 80px;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 70%;
+}
+.container-histoire2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.photo-naissance {
+    width: 50%;
+}
+.title-histo3 {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.text-histoire2{
+    display: flex;
+    padding: 80px;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 70%;
+}
+.photo1 {
+    width: 100%;
+}
+
+
+.photo2{
+    width: 200%;
+}
+.photo3  {
+    width: 200%;
+}
+.photo-naissance-lion img{
+    width: 100%;
+    height: 100%;
+}
+.photo-accueil-dauphin img  {
+    width: 100%;
+    height: 100%;
+}.bienvenue {
+    font: size 30px;
+    color: #000000;
+    margin-bottom: 20px;
+}.para-histoire2 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.para-histoire3{
+    
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+    
+
+}
+.para-histoire4{
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.button-soigneur {
+    
+    background-color:#8B4513;
+    
+    
+    
+}
+.button-naissance {
+    background-color: #8B4513;
+}
+.button-nouveau {
+    background-color: #8B4513;
+}
+.horaire-ouverture {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.container-horaire {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}.horaires {
+
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: center;
+
+
+}.body-third {
+    background-color: rgb(46, 181, 165);
+    font-size: medium;
+   
+}
+.horaire-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+.horaire-video {
+    width: 100%;
+   height: 100%;
+}
+.video-zoo{
+    
+    width: 100%;
+    height: 100%;
+
+
+}
+
+
+  
+  
+
+    
+
+   
+    
+
+
+
+
+
+    
+
+
+    
+
+
+    
+
+
+
+    
+    
+   
+    

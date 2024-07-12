@@ -1,0 +1,29 @@
+.section-habitat {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #71c737;
+  flex-wrap: nowrap;
+}
+.section-habitat-intro {
+  width: 45%;
+  background-color: #437721;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  margin-top: 80px;
+}
+
+.section-habitat-intro .intro-text {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.section-habitat-left {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

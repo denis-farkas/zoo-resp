@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1025px) {
+  .section-prestation {
+    height: auto;
+    width: 100vw;
+    margin: 10px auto;
+    height: auto;
+  }
+
+  .prestation-jumbotron {
+    align-items: flex-start;
+    justify-content: center;
+    width: 95%;
+    height: auto;
+    margin: 10px auto;
+    flex-wrap: wrap;
+  }
+  .prestation-title {
+    margin-top: 10px;
+  }
+}

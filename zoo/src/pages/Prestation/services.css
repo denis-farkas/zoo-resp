@@ -1,0 +1,180 @@
+.prestation-du-zoo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.resto-service {
+  width: 90%;
+  background-color: #82bf59;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 20px auto;
+}
+
+.intro-resto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  height: 340px;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.intro-title-resto {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.intro-text-resto {
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  font-size: 18px;
+}
+
+.intro-footer-resto {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #437721;
+  text-align: start;
+}
+
+.intro-right-resto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 26px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "un deux"
+    "trois quatre";
+  width: 50%;
+  height: 340px;
+}
+.img-intro-resto {
+  width: 100%;
+  height: auto;
+}
+.visite-guidee-service {
+  background-color: #82bf59;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.intro-visite-guidee {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.intro-title-visite-guidee {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.intro-text-visite-guidee {
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  font-size: 18px;
+}
+
+.intro-footer-visite-guidee {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 50%;
+  color: #437721;
+  text-align: start;
+}
+
+.intro-right-visite-guidee img {
+  width: 60%;
+  height: auto;
+}
+.img-intro-visite-guidee {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+.petit-train-service {
+  background-color: #82bf59;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.intro-petit-train {
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.intro-title-petit-train {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.intro-text-petit-train {
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  font-size: 18px;
+}
+
+.intro-footer-petit-train {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 50%;
+  color: #437721;
+  text-align: start;
+}
+
+.intro-right-petit-train img {
+  width: 60%;
+  height: auto;
+}
+.img-intro-petit-train {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.gold {
+  background-color: #c3b25a;
+}
+.black {
+  background-color: #000;
+}
+.intro-bloc {
+  color: white;
+}
+.un {
+  grid-area: un;
+}
+.deux {
+  grid-area: deux;
+}
+.trois {
+  grid-area: trois;
+}
+.quatre {
+  grid-area: quatre;
+}

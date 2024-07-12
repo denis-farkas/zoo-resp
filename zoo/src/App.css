@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+}
+
+.app {
+  width: 100vw;
+}
+
+.full-height {
+  height: auto;
+}
+
+@media only screen and (max-width: 1180px) {
+  .full-height {
+    height: auto;
+  }
+}

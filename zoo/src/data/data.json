@@ -1,0 +1,360 @@
+{
+  "habitats": [
+    {
+      "title": "Savane africaine",
+      
+      "img": "image/savane.jpeg",
+      "img2": "image/savane2.jpeg",
+
+      "description": "La savane est une sorte de vaste prairie de hautes herbes typique des régions tropicales à longue saison sèche. On y trouve des plantes herbacées type graminées, et plus ou moins d'arbres (dont l'Acacia et le Baobab) et arbustes, selon les savanes. En fonction de la densité des espèces qu'elle recense, on parle de savane herbeuse ou de savane arborée  Les principales savanes se situent en Afrique orientale (Mali, Niger, Nord de la Côte d'Ivoire, Kenya), en Inde centrale, en Amérique du Sud, aux Caraïbes (les llanos du Venezuela et le cerrado du Brésil sont considérés comme des types locaux de savane), et dans le Nord de l'Australie.",
+      "animaux": [
+        {
+          "title": "Lion",
+          "img": "image/lion.jpeg",
+          "img2": "image/lion2.jpeg",
+
+          "description": " Simba le lion est un mammifère carnivore de la famille des félidés.Il est affecté à l'habitat de la savane africaine.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Gazelle",
+          "img": "image/gazelle.jpeg",
+          "img2": "image/gazelle2.jpeg",
+
+          "description": "Léa la gazelle est un mammifère herbivore de la famille des bovidés. Elle est affectée à l'habitat de la savane africaine.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Eléphant",
+          "img": "image/elephant.jpeg",
+          "img2": "image/elephant2.jpeg",
+          "description": "Alphonse l'éléphant est un mammifère herbivore de la famille des éléphantidés. Il est affecté à l'habitat de la savane africaine.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Girafe",
+          "img": "image/girafe.jpeg",
+          "img2": "image/girafe2.jpeg",
+          "description": "Zara la girafe est un mammifère herbivore de la famille des girafidés. Elle est affectée à l'habitat de la savane africaine.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Zèbre",
+          "img": "image/zebre.jpeg",
+          "img2": "image/zebre2.jpeg",
+          "description": " Rufus le zèbre est un mammifère herbivore de la famille des équidés. Il est affecté à l'habitat de la savane africaine.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        }
+      ]
+    },
+
+    {
+      "title": "Forêt tropicale",
+      
+      "img": "image/foret.jpeg",
+      "img2": "image/foret2.jpg",
+      "description": "La forêt tropicale est la forêt caractéristique des régions tropicales et équatoriales. Sous ce terme se cachent des réalités très différentes, des forêts tropophiles, composées d'arbres assez épars poussant sous un climat tropical de savane, à la forêt dite tropicale humide dans des zones à climat équatorial, en passant par les forêts de nuages relativement froides.",
+      "animaux": [
+        {
+          "title": "Tigre",
+
+          "img": "image/tigre.jpeg",
+          "img2": "image/tigre2.jpeg",
+          "description": "Léo le tigre est un mammifère carnivore de la famille des félidés. Il est affecté à l'habitat de la forêt tropicale.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Gorille",
+          "img": "image/gorille.jpeg",
+          "img2": "image/gorille2.jpeg",
+          "description": " Léon le gorille est un mammifère herbivore de la famille des hominidés. Il est affecté à l'habitat de la forêt tropicale.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Perroquet",
+          "img": "image/peroquet.jpeg",
+          "img2": "image/peroquet2.jpeg",
+          "description": " Cachou le perroquet est un oiseau de la famille des psittacidés. Il est affecté à l'habitat de la forêt tropicale.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Capybara",
+          "img": "image/capybara.jpeg",
+          "img2": "image/capybara2.jpeg",
+          "description": " Félix le capybara est un rongeur. Il est affecté à l'habitat de la forêt tropicale.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        }
+      ]
+    },
+    {
+      "title": "Désert",
+      
+      "img": "image/desert.jpeg",
+      "img2": "image/desert2.jpeg",
+      "description": "Un désert est une zone de terre qui reçoit très peu de précipitations. Les déserts peuvent être chauds ou froids. Les déserts chauds sont généralement situés près de l'équateur, tandis que les déserts froids sont généralement situés près des pôles. Les déserts chauds ont tendance à être très secs, tandis que les déserts froids ont tendance à être très secs.",
+      "animaux": [
+        {
+          "title": "Chameau",
+          "img": "image/chameau.jpeg",
+          "img2": "image/chameau2.jpeg",
+          "description": " Bernard le chameau est un mammifère herbivore de la famille des camélidés. Il est affecté à l'habitat du désert.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Fennec",
+          "img": "image/fennec.jpeg",
+          "img2": "image/fennec2.jpeg",
+          "description": " Futé le fennec est un mammifère carnivore de la famille des canidés. Il est affecté à l'habitat du désert.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Scorpion",
+          "img": "image/scorpion.jpeg",
+          "img2": "image/scorpion2.jpeg",
+
+          "description": "Pic Pic le scorpion est un arachnide. Il est affecté à l'habitat du désert.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Serpent à sonnette",
+          "img": "image/serpent.jpeg",
+          "img2": "image/serpent2.jpeg",
+          "description": "Grelot le serpent à sonnette est un reptile. Il est affecté à l'habitat du désert.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        }
+      ]
+    },
+
+    {
+      "title": "Montagnes",
+      
+      "img": "image/montagne.jpeg",
+      "img2": "image/montagne2.jpeg",
+      "description": "Une montagne est une forme de relief qui s'élève au-dessus de la surface environnante dans un paysage. Les montagnes sont formées par des forces tectoniques, des éruptions volcaniques ou des érosions. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes. Les montagnes peuvent être isolées ou former des chaînes de montagnes.",
+      "animaux": [
+        {
+          "title": "Léopard des neiges",
+          "img": "image/leopard.jpeg",
+          "img2": "image/leopard2.jpeg",
+          "description": "Frileux le léopard des neiges est un mammifère carnivore de la famille des félidés. Il est affecté à l'habitat des montagnes.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Mouflon",
+          "img": "image/mouflon.jpeg",
+          "img2": "image/mouflon2.jpeg",
+          "description": "Pato le mouflon est un mammifère herbivore de la famille des bovidés. Il est affecté à l'habitat des montagnes.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Lama",
+          "img": "image/lama.jpeg",
+          "img2": "image/lama2.jpeg",
+          "description": " Têtu le lama est un mammifère herbivore de la famille des camélidés. Il est affecté à l'habitat des montagnes.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Panda roux",
+          "img": "image/pandaroux.jpeg",
+          "img2": "image/pandaroux2.jpeg",
+          "description": " Tout doux le panda roux est un mammifère herbivore de la famille des ailuridés. Il est affecté à l'habitat des montagnes.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        }
+      ]
+    },
+
+    {
+      "title": "Régions polaires",
+      
+      "img": "image/regionpolaire.jpeg",
+      "img2": "image/regionpolaire2.jpeg",
+      "description": "Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles. Les régions polaires sont les régions de la Terre entourant les pôles.",
+      "animaux": [
+        {
+          "title": "Manchot empereur",
+          "img": "image/manchotempereur.jpeg",
+          "img2": "image/manchotempereur.jpeg",
+          "description": " Queue de pie le manchot empereur est un oiseau de la famille des sphéniscidés. Il est affecté à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Phoque",
+          "img": "image/phoque.jpeg",
+          "img2": "image/phoque2.jpeg",
+          "description": " Paresseux le phoque est un mammifère carnivore de la famille des phocidés. Il est affecté à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Ours polaire",
+          "img": "image/ourspolaire.jpeg",
+          "img2": "image/ourspolaire2.jpeg",
+          "description": " Flocon l'ours polaire est un mammifère carnivore de la famille des ursidés. Il est affecté à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+
+        {
+          "title": "Renard polaire",
+          "img": "image/renardesneiges.jpeg",
+          "img2": "image/renardesneiges2.jpeg",
+          "description": " Filou le renard polaire est un mammifère carnivore de la famille des canidés. Il est affecté à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        }
+      ]
+    },
+
+    {
+      "title": "Océan",
+      
+      "img": "image/ocean.jpeg",
+      "img2": "image/ocean2.jpeg",
+      "description": "Un océan est une vaste étendue d'eau salée qui recouvre une grande partie de la surface de la Terre. Les océans sont divisés en cinq grands bassins : l'océan Atlantique, l'océan Pacifique, l'océan Indien, l'océan Arctique et l'océan Antarctique. Les océans sont divisés en cinq grands bassins : l'océan Atlantique, l'océan Pacifique, l'océan Indien, l'océan Arctique et l'océan Antarctique. Les océans sont divisés en cinq grands bassins : l'océan Atlantique, l'océan Pacifique, l'océan Indien, l'océan Arctique et l'océan Antarctique. Les océans sont divisés en cinq grands bassins : l'océan Atlantique, l'océan Pacifique, l'océan Indien, l'océan Arctique et l'océan Antarctique. Les océans sont divisés en cinq grands bassins : l'océan Atlantique, l'océan Pacifique, l'océan Indien, l'océan Arctique et l'océan Antarctique.",
+      "animaux": [
+        {
+          "title": "Requin blanc",
+          "img": "image/requinblanc.jpeg",
+          "img2": "image/requinblanc2.jpeg",
+          "description": " Adolphe  le requin blanc est un poisson de la famille des lamnidés. Il est affecté à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Dauphin",
+          "img": "image/dauphin.jpeg",
+          "img2": "image/dauphin2.jpeg",
+          "description": " Joueur le dauphin est un mammifère marin de la famille des delphinidés. Il est affecté à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Raie manta",
+          "img": "image/raiemanta.jpeg",
+          "img2": "image/raiemanta2.jpeg",
+          "description": " Elec la raie manta est un poisson de la famille des mobulidés. Elle est affectée à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        },
+        {
+          "title": "Tortue de mer",
+          "img": "image/tortuedemer.jpeg",
+          "img2": "image/tortuedemer2.jpeg",
+          "description": " Maéva la tortue de mer est un reptile. Elle est affectée à l'habitat de l'océan.",
+          "santé": "",
+          "alimentation": "",
+          "nouriture": "",
+          "soins": ""
+        }
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "name": "Education",
+      "logo": "image/education.jpeg",
+      "description": "Venez apprendre le comportement des animaux et leur mode de vie."
+    },
+    {
+      "name": "Conservation",
+      "logo": "image/conservation.jpeg",
+      "description":"Programme de conservation des animaux: "
+    },
+    {
+      "name": "Recherche",
+      "logo": "image/recherche.jpeg",
+      "description": "Recherche sur les animaux et leur habitat."
+    }
+  ],
+  "prestations": [
+    {
+      "name": "Restaurant",
+      "logo": "image/restaurant.jpeg",
+      "description": "Bienvenue au Restaurant du zoo qui vous propose une cuisine variée et équilibrée pour toute la famille."
+    },
+    {
+      "name": "Visites guidées",
+      "logo": "image/visiteguidee.jpeg",
+      "description": "Profitez de votre visite, accompagné par un de nos guides professionnels et découvrez la magie du monde animal d'une manière plus scientifique "
+    },
+    {
+      "name": "Petit Train",
+      "logo": "image/petitrain.jpeg",
+      "description": "Découvrez le zoo avec notre petit train électrique qui vous emmène à travers les différents habitats des animaux."
+    }
+  ]
+}
