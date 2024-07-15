@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AnimalCard = ({ animal }) => {
   return (
     <div className="card  mb-3 animal-card">
-      <Link to="/animal" state={{ animal: animal }}>
+      <Link to={`/animal/${animal.ID_animaux}`}>
         <div className=" animal-card-header">
           {" "}
           <img src={`/${animal.IMG}`} alt="" />{" "}

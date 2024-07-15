@@ -25,6 +25,8 @@ import DeleteMessage from "./components/DeleteMessage";
 import DeleteAvis from "./components/DeleteAvis";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
+import BackAnimal from "./pages/backAnimal";
+import EditAnimal from "./pages/editAnimal";
 
 function App() {
   return (
@@ -42,7 +44,7 @@ function App() {
           <Route path="/histoire" element={<Histoire />} />
           <Route path="/actualite" element={<Actualite />} />
           <Route path="/mission" element={<Mission />} />
-          <Route path="/animal" element={<Animal />} />
+          <Route path="/animal/:id" element={<Animal />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/userProfile" element={<UserProfile />} />
@@ -52,7 +54,9 @@ function App() {
           <Route path="/deleteOneMessage/:id" element={<DeleteMessage />} />
           <Route path="/backAvis" element={<BackAvis />} />
           <Route path="/deleteOneAvis/:id" element={<DeleteAvis />} />
-          <Route path={`/editUser/:id`} element={<EditUser />} />
+          <Route path="/backAnimal" element={<BackAnimal />} />
+          <Route path="/editUser/:id" element={<EditUser />} />
+          <Route path="/editAnimal/:id" element={<EditAnimal />} />
           <Route path="*" element={<p>Error 404</p>} />
         </Routes>
 

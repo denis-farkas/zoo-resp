@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : ven. 05 juil. 2024 à 14:56
--- Version du serveur : 8.3.0
--- Version de PHP : 8.2.18
+-- Hôte : localhost:3306
+-- Généré le : lun. 15 juil. 2024 à 13:45
+-- Version du serveur : 8.0.30
+-- Version de PHP : 8.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,14 +27,12 @@ SET time_zone = "+00:00";
 -- Structure de la table `alimentation`
 --
 
-DROP TABLE IF EXISTS `alimentation`;
-CREATE TABLE IF NOT EXISTS `alimentation` (
-  `ID_alimentation` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `alimentation` (
+  `ID_alimentation` int NOT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `DESCRIPTION` text,
-  `QUANTITE` varchar(250) DEFAULT NULL,
-  PRIMARY KEY (`ID_alimentation`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `QUANTITE` varchar(250) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `alimentation`
@@ -51,9 +49,8 @@ INSERT INTO `alimentation` (`ID_alimentation`, `NAME`, `DESCRIPTION`, `QUANTITE`
 -- Structure de la table `animaux`
 --
 
-DROP TABLE IF EXISTS `animaux`;
-CREATE TABLE IF NOT EXISTS `animaux` (
-  `ID_animaux` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `animaux` (
+  `ID_animaux` int NOT NULL,
   `IMG` varchar(150) DEFAULT NULL,
   `IMG2` varchar(150) DEFAULT NULL,
   `TITLE` varchar(50) DEFAULT NULL,
@@ -61,28 +58,25 @@ CREATE TABLE IF NOT EXISTS `animaux` (
   `SANTE` varchar(250) DEFAULT NULL,
   `SOIN` text,
   `ID_alimentation` int NOT NULL,
-  `id_habitat` int NOT NULL,
-  PRIMARY KEY (`ID_animaux`),
-  KEY `ID_alimentation` (`ID_alimentation`),
-  KEY `id_habitat` (`id_habitat`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `id_habitat` int NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `animaux`
 --
 
 INSERT INTO `animaux` (`ID_animaux`, `IMG`, `IMG2`, `TITLE`, `DESCRIPTION`, `SANTE`, `SOIN`, `ID_alimentation`, `id_habitat`) VALUES
-(1, 'image/lion.jpeg', 'image/lion2.jpeg', 'Lion', 'Simba le lion est un mammifère carnivore de la famille des félidés. Il est affecté à l\'habitat de la savane africaine.', NULL, NULL, 1, 1),
-(2, 'image/gazelle.jpeg', 'image/gazelle2.jpeg', 'Gazelle', 'Léa la gazelle est un mammifère herbivore de la famille des bovidés. Elle est affectée à l\'habitat de la savane africaine.', NULL, NULL, 2, 1),
+(1, 'image/lion.jpeg', 'image/lion2.jpeg', 'Lion', 'Simba le lion est un mammifère carnivore de la famille des félidés. Il est affecté à l\'habitat de la savane africaine.', 'en pleine croissance', 'rien de particulier', 1, 1),
+(2, 'image/gazelle.jpeg', 'image/gazelle2.jpeg', 'Gazelle', 'Léa la gazelle est un mammifère herbivore de la famille des bovidés. Elle est affectée à l\'habitat de la savane africaine.', 'en pleine croissance', 'rien de particulier', 2, 1),
 (3, 'image/elephant.jpeg', 'image/elephant2.jpeg', 'Elephant', 'Alphonse l\'éléphant est un mammifère herbivore de la famille des éléphantidés. Il est affecté à l\'habitat de la savane africaine.', NULL, NULL, 2, 1),
 (4, 'image/girafe.jpeg', 'image/girafe2.jpeg', 'Girafe', 'Zara la girafe est un mammifère herbivore de la famille des girafidés. Elle est affectée à l\'habitat de la savane africaine.', NULL, NULL, 2, 1),
 (5, 'image/zebre.jpeg', 'image/zebre2.jpeg', 'Zèbre', 'Rufus le zèbre est un mammifère herbivore de la famille des équidés. Il est affecté à l\'habitat de la savane africaine.', NULL, NULL, 2, 1),
-(6, 'image/tigre.jpeg', 'image/tigre2.jpeg', 'Tigre', 'Léo le tigre est un mammifère carnivore de la famille des félidés. Il est affecté à l\'habitat de la forêt tropicale.', NULL, NULL, 1, 2),
+(6, 'image/tigre.jpeg', 'image/tigre2.jpeg', 'Tigre', 'Léo le tigre est un mammifère carnivore de la famille des félidés. Il est affecté à l\'habitat de la forêt tropicale.', 'un peu fatigué', 'vitamines C - 1000mg / jour', 1, 2),
 (7, 'image/gorille.jpeg', 'image/gorille2.jpeg', 'Gorille', 'Léon le gorille est un mammifère herbivore de la famille des hominidés. Il est affecté à l\'habitat de la forêt tropicale.', NULL, NULL, 2, 2),
 (8, 'image/peroquet.jpeg', 'image/peroquet2.jpeg', 'Perroquet', 'Cachou le perroquet est un oiseau de la famille des psittacidés. Il est affecté à l\'habitat de la forêt tropicale.', NULL, NULL, 3, 2),
 (9, 'image/capybara.jpeg', 'image/capybara2.jpeg', 'Capybara', 'Félix le capybara est un rongeur. Il est affecté à l\'habitat de la forêt tropicale.', NULL, NULL, 2, 2),
 (10, 'image/chameau.jpeg', 'image/chameau2.jpeg', 'Chameau', 'Bernard le chameau est un mammifère herbivore de la famille des camélidés. Il est affecté à l\'habitat du désert.', NULL, NULL, 2, 3),
-(11, 'image/fennec.jpeg', 'image/fennec2.jpeg', 'Fennec', 'Futé le fennec est un mammifère carnivore de la famille des canidés. Il est affecté à l\'habitat du désert.', NULL, NULL, 1, 3),
+(11, 'image/fennec.jpeg', 'image/fennec2.jpeg', 'Fennec', 'Futé le fennec est un mammifère carnivore de la famille des canidés. Il est affecté à l\'habitat du désert.', 'un peu dépressif', 'besoin d\'affection et de jeux 1h/jour', 1, 3),
 (12, 'image/scorpion.jpeg', 'image/scorpion2.jpeg', 'Scorpion', '\"Pic Pic le scorpion est un arachnide. Il est affecté à l\'habitat du désert.', NULL, NULL, 1, 3),
 (13, 'image/serpent.jpeg\r\n', 'image/serpent.jpeg\r\n', 'Serpent à sonnette', 'Grelot le serpent à sonnette est un reptile. Il est affecté à l\'habitat du désert.', NULL, NULL, 1, 3),
 (14, 'image/leopard.jpeg', 'image/leopard2.jpeg', 'Léopard des neiges', 'Frileux le léopard des neiges est un mammifère carnivore de la famille des félidés. Il est affecté à l\'habitat des montagnes.', NULL, NULL, 1, 4),
@@ -101,15 +95,33 @@ INSERT INTO `animaux` (`ID_animaux`, `IMG`, `IMG2`, `TITLE`, `DESCRIPTION`, `SAN
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `avis`
+--
+
+CREATE TABLE `avis` (
+  `id` int NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `content` text NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `avis`
+--
+
+INSERT INTO `avis` (`id`, `name`, `email`, `content`, `date`) VALUES
+(6, 'bbb', 'bb@bb.fr', 'bbbbbbbbbbbbbb', '2024-07-15 10:02:00');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `care`
 --
 
-DROP TABLE IF EXISTS `care`;
-CREATE TABLE IF NOT EXISTS `care` (
+CREATE TABLE `care` (
   `ID_animaux` int NOT NULL,
-  `ID_user` int NOT NULL,
-  PRIMARY KEY (`ID_animaux`,`ID_user`),
-  KEY `ID_user` (`ID_user`)
+  `ID_user` int NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -118,15 +130,13 @@ CREATE TABLE IF NOT EXISTS `care` (
 -- Structure de la table `habitat`
 --
 
-DROP TABLE IF EXISTS `habitat`;
-CREATE TABLE IF NOT EXISTS `habitat` (
-  `id_habitat` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `habitat` (
+  `id_habitat` int NOT NULL,
   `TITLE` varchar(100) DEFAULT NULL,
   `IMG` varchar(250) DEFAULT NULL,
   `IMG2` varchar(250) DEFAULT NULL,
-  `DESCRIPTION` text,
-  PRIMARY KEY (`id_habitat`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `DESCRIPTION` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `habitat`
@@ -143,17 +153,37 @@ INSERT INTO `habitat` (`id_habitat`, `TITLE`, `IMG`, `IMG2`, `DESCRIPTION`) VALU
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `content` text NOT NULL,
+  `date` datetime NOT NULL,
+  `phone` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `email`, `content`, `date`, `phone`) VALUES
+(6, 'ff', 'ff@ff.fr', 'fffff', '2024-07-13 12:48:00', '');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `mission`
 --
 
-DROP TABLE IF EXISTS `mission`;
-CREATE TABLE IF NOT EXISTS `mission` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `mission` (
+  `ID` int NOT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `LOGO` varchar(150) DEFAULT NULL,
-  `DESCRIPTION` text,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `DESCRIPTION` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `mission`
@@ -170,14 +200,12 @@ INSERT INTO `mission` (`ID`, `NAME`, `LOGO`, `DESCRIPTION`) VALUES
 -- Structure de la table `prestation`
 --
 
-DROP TABLE IF EXISTS `prestation`;
-CREATE TABLE IF NOT EXISTS `prestation` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `prestation` (
+  `ID` int NOT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `LOGO` varchar(150) DEFAULT NULL,
-  `DESCRIPTION` text,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `DESCRIPTION` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `prestation`
@@ -191,18 +219,137 @@ INSERT INTO `prestation` (`ID`, `NAME`, `LOGO`, `DESCRIPTION`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `_user`
+-- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `_user`;
-CREATE TABLE IF NOT EXISTS `_user` (
-  `ID_user` int NOT NULL AUTO_INCREMENT,
-  `NAME` varchar(150) DEFAULT NULL,
-  `ROLE` varchar(50) DEFAULT NULL,
-  `EMAIL` varchar(150) DEFAULT NULL,
-  `PASSWORD` varchar(250) DEFAULT NULL,
-  PRIMARY KEY (`ID_user`)
+CREATE TABLE `users` (
+  `user_id` int NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `role` varchar(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`user_id`, `name`, `email`, `password`, `role`) VALUES
+(1, 'dd', 'dd@ddd.fr', '$2b$10$Qdz6pBdJsD4imi4jR.fApuJCE.jRX2yhLkutNByePNHCJtGxrjAea', 'admin'),
+(2, 'veto', 'veto@veto.fr', '$2b$10$5DtUqLz9zq2JrrXvjhrtcudPrienkRb2U55ayNiyMn6wTo5up8iKW', 'veto');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `alimentation`
+--
+ALTER TABLE `alimentation`
+  ADD PRIMARY KEY (`ID_alimentation`);
+
+--
+-- Index pour la table `animaux`
+--
+ALTER TABLE `animaux`
+  ADD PRIMARY KEY (`ID_animaux`),
+  ADD KEY `ID_alimentation` (`ID_alimentation`),
+  ADD KEY `id_habitat` (`id_habitat`);
+
+--
+-- Index pour la table `avis`
+--
+ALTER TABLE `avis`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `care`
+--
+ALTER TABLE `care`
+  ADD PRIMARY KEY (`ID_animaux`,`ID_user`),
+  ADD KEY `ID_user` (`ID_user`);
+
+--
+-- Index pour la table `habitat`
+--
+ALTER TABLE `habitat`
+  ADD PRIMARY KEY (`id_habitat`);
+
+--
+-- Index pour la table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `mission`
+--
+ALTER TABLE `mission`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `prestation`
+--
+ALTER TABLE `prestation`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `alimentation`
+--
+ALTER TABLE `alimentation`
+  MODIFY `ID_alimentation` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT pour la table `animaux`
+--
+ALTER TABLE `animaux`
+  MODIFY `ID_animaux` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT pour la table `avis`
+--
+ALTER TABLE `avis`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `habitat`
+--
+ALTER TABLE `habitat`
+  MODIFY `id_habitat` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `mission`
+--
+ALTER TABLE `mission`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT pour la table `prestation`
+--
+ALTER TABLE `prestation`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,68 +1,65 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import { userService } from "../../utils/userService";
+import { useNavigate, useParams } from "react-router-dom";
 
-const UserProfile = () => {
-  const [user, setUser] = useState(null);
+const EditAnimal = () => {
+  const { id } = useParams();
+
   let actualUser = JSON.parse(localStorage.getItem("user"));
-
-  const id = actualUser.userId;
   const navigate = useNavigate();
 
-  const API_URL = "http://localhost:3001";
+  const [animal, setAnimal] = useState();
 
   useEffect(() => {
-    let data;
-
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `${API_URL}/api/readOneUser?id=${id}`,
+      url: "http://localhost:3001/api/animal/" + id,
       headers: {
         "Content-Type": "application/json",
       },
-      data: data,
     };
-
     axios
       .request(config)
       .then((response) => {
         console.log(response);
-        setUser(response.data.user);
+        setAnimal(response.data.animal);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [id]);
 
   // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setUser((prevData) => ({
+    setAnimal((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-    console.log(user);
+    console.log(animal);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (id !== undefined || user.role === "admin") {
-      //let errorMessage = null;
-      const token = actualUser.token;
-      user.userId = id;
-      let data = { user };
+    if (
+      actualUser !== undefined &&
+      (actualUser.role === "admin" || actualUser.role === "veto")
+    ) {
+      const API_URL = "http://localhost:3001";
+      let data = {
+        SOIN: animal.SOIN,
+        SANTE: animal.SANTE,
+      };
       data = JSON.stringify(data);
-      console.log(data);
+
       let config = {
         method: "put",
         maxBodyLength: Infinity,
-        url: `${API_URL}/api/updateUser`,
+        url: `${API_URL}/api/updateAnimal/${id}`,
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
         data: data,
       };
@@ -72,11 +69,9 @@ const UserProfile = () => {
         .then((response) => {
           console.log(response);
           if (response.status === 200) {
-            console.log("Response succeeded!");
             toast.success("Modification validée");
-            userService.update();
             setTimeout(() => {
-              navigate("/signIn");
+              navigate("/backAnimal");
             }, 3000);
           }
         })
@@ -91,49 +86,51 @@ const UserProfile = () => {
       const errorMessage =
         "Vous ne disposez pas des droits pour cette modification";
       toast.error(errorMessage);
+      navigate("/home");
     }
   };
 
   return (
     <div className="main-table">
       <div className="center">
-        <h2>Mes informations personnelles</h2>
+        <h2>Informations Animal: {animal && animal.TITLE}</h2>
       </div>
-      <form className="formGroup" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="col-sm-6 mx-auto">
-          <label className="form-label mt-4" htmlFor="email">
-            Email
+          <label className="form-label mt-4" htmlFor="soin">
+            Soins
           </label>
           <input
-            id="email"
-            aria-label="Entrez votre adresse email"
+            id="soin"
+            aria-label="Entrez les soins"
             className="form-control"
-            type="email"
-            name="email"
-            value={user && user.email}
+            type="text"
+            name="SOIN"
+            placeholder="Renseignez les soins de l'animal"
+            value={animal && (animal.SOIN !== null ? animal.SOIN : "")}
             onChange={handleInputChange}
             required
           />
+          <div className="col-sm-6 mx-auto">
+            <label className="form-label mt-4" htmlFor="sante">
+              Santé
+            </label>
+            <input
+              id="sante"
+              aria-label="Entrez la santé de l'animal"
+              className="form-control"
+              type="text"
+              name="SANTE"
+              value={animal && (animal.SANTE !== null ? animal.SANTE : "")}
+              placeholder="Renseignez la santé de l'animal"
+              onChange={handleInputChange}
+              required="required"
+            />
+          </div>
         </div>
-        <div className="col-sm-6 mx-auto">
-          <label className="form-label mt-4" htmlFor="password">
-            Mot de passe
-          </label>
-          <input
-            id="password"
-            aria-label="Entrez votre mot de passe"
-            className="form-control"
-            type="password"
-            name="password"
-            placeholder="Entrez votre mot de passe ou un nouveau"
-            onChange={handleInputChange}
-            required="required"
-          />
-        </div>
-
         <div className="center">
           <button className="btn btn-primary" type="submit">
-            Save Changes
+            Modifier
           </button>
         </div>
       </form>
@@ -141,4 +138,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default EditAnimal;

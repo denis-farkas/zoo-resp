@@ -1,4 +1,8 @@
 .section-avis {
+  background-image: url("../../../public/image/patagonie.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,8 +11,8 @@
   border-radius: 10px;
   margin: 40px;
   flex-wrap: wrap;
-  background-color: blanchedalmond;
 }
+
 .avis-jumbotron {
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +28,8 @@
   width: 100%;
   height: 50px;
   margin-top: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.356);
 }
 .avis-service {
   display: flex;

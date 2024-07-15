@@ -1,9 +1,29 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import ViewAvis from "../../components/viewAvis";
 
 const BackAvis = () => {
   const [avis, setAvis] = useState(null);
+  const [selectedAvis, setSelectedAvis] = useState(null);
+
+  let actualUser = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate();
+  if (
+    actualUser === null ||
+    actualUser.role !== "admin" ||
+    actualUser.role !== "veto"
+  ) {
+    navigate("/");
+  }
+
+  const handleRowClick = (avis) => {
+    setSelectedAvis(avis);
+  };
+
+  const closeAvis = () => {
+    setSelectedAvis(null);
+  };
 
   useEffect(() => {
     const API_URL = "http://localhost:3001";
@@ -28,7 +48,10 @@ const BackAvis = () => {
   }, []);
 
   return (
-    <div className="main">
+    <div className="main-table">
+      <div className="display-avis my-5">
+        {selectedAvis && <ViewAvis avis={selectedAvis} closeAvis={closeAvis} />}
+      </div>
       <table className="table">
         <thead>
           <tr>
@@ -62,6 +85,13 @@ const BackAvis = () => {
                 <td>{avis.content}</td>
                 <td>{avis.date}</td>
                 <td>
+                  <button
+                    className="btn btn-success mx-1"
+                    key={avis.id + avis.name}
+                    onClick={() => handleRowClick(avis)}
+                  >
+                    Voir
+                  </button>
                   <Link
                     to={`/deleteOneAvis/${avis.id}`}
                     className="btn btn-danger"

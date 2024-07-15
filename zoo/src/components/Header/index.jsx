@@ -122,7 +122,7 @@ const Header = () => {
               )}
               <li className="nav-item">
                 {/* Condition pour afficher le lien vers l'espace admin pour les utilisateurs ayant le rôle "admin" */}
-                {user && user.role === "admin" && (
+                {user && (user.role === "admin" || user.role === "veto") && (
                   <NavLink
                     to={"/backOffice"}
                     className={({ isActive }) =>

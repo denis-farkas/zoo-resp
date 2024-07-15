@@ -95,12 +95,13 @@ const EditUser = () => {
   };
 
   return (
-    <div className="main">
-      <h2>Informations personnelles</h2>
-
+    <div className="main-table">
+      <div className="center">
+        <h2>Informations personnelles</h2>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label className="col-sm-2 col-form-label" htmlFor="email">
+        <div className="col-sm-6 mx-auto">
+          <label className="form-label mt-4" htmlFor="email">
             Email
           </label>
           <input
@@ -113,8 +114,8 @@ const EditUser = () => {
             onChange={handleInputChange}
             required
           />
-          <div className="form-group">
-            <label className="col-sm-2 col-form-label" htmlFor="password">
+          <div className="col-sm-6 mx-auto">
+            <label className="form-label mt-4" htmlFor="password">
               Mot de passe
             </label>
             <input
@@ -129,9 +130,11 @@ const EditUser = () => {
             />
           </div>
         </div>
-        <button className="btn btn-primary" type="submit">
-          Save Changes
-        </button>
+        <div className="center">
+          <button className="btn btn-primary" type="submit">
+            Save Changes
+          </button>
+        </div>
       </form>
     </div>
   );

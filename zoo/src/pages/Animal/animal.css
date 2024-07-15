@@ -1,30 +1,76 @@
-.flex-container-animal-zoo {
+.animal {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
- 
   padding: 10px;
+}
+.animal-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.animal-left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.animal-right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
 }
 
 .flex-item {
-  background-color: lightgray;
+  width: 47%;
+  height: 47%;
   padding: 20px;
   margin: 5px;
   text-align: center;
   border: 1px solid #ccc;
-  flex: 1; 
-  
   border-radius: 10px;
-  
- 
-}.card-animal-zoo__image {
-
+  min-width: 310px;
+}
+.animal-right img {
   border-radius: 10px;
-  
-    float: left;
-    width:  100%;
-    height:500px;
-    object-fit: cover;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 
+.flex-item.yellow {
+  background-color: #f1c40fb2;
+}
+.flex-item.blue {
+  background-color: #3498dbc0;
+}
+.flex-item.green {
+  background-color: #2ecc70af;
+}
+.flex-item.red {
+  background-color: #e74d3cad;
+}
+
+@media screen and (max-width: 720px) {
+  .animal {
+    flex-direction: column;
+  }
+  .animal-content {
+    flex-direction: column;
+  }
+  .animal-left {
+    width: 100%;
+  }
+  .animal-right {
+    width: 100%;
+  }
+  .flex-item {
+    width: 100%;
+  }
+  .animal-right img {
+    height: 300px;
+  }
+}

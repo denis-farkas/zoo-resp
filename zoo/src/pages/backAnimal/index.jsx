@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import ViewMessage from "../../components/viewMessage";
-import formatDate from "../../utils/formatDate";
+import ViewAnimal from "../../components/viewAnimal";
 
-const BackMessage = () => {
-  const [messages, setMessages] = useState(null);
-  const [selectedMessage, setSelectedMessage] = useState(null);
+const BackAnimal = () => {
+  const [animaux, setAnimaux] = useState(null);
+  const [selectedAnimal, setSelectedAnimal] = useState(null);
   let actualUser = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
   if (
@@ -16,12 +15,13 @@ const BackMessage = () => {
   ) {
     navigate("/");
   }
-  const handleRowClick = (message) => {
-    setSelectedMessage(message);
+
+  const handleRowClick = (animal) => {
+    setSelectedAnimal(animal);
   };
 
-  const closeMessage = () => {
-    setSelectedMessage(null);
+  const closeAnimal = () => {
+    setSelectedAnimal(null);
   };
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const BackMessage = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `${API_URL}/api/readMessages`,
+      url: `${API_URL}/api/readAnimaux`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -39,7 +39,7 @@ const BackMessage = () => {
     axios
       .request(config)
       .then((response) => {
-        setMessages(response.data.messages);
+        setAnimaux(response.data.animaux);
       })
       .catch((error) => {
         console.log(error);
@@ -48,31 +48,28 @@ const BackMessage = () => {
 
   return (
     <div className="main-table">
-      <div className="display-message my-5">
-        {selectedMessage && (
-          <ViewMessage message={selectedMessage} closeMessage={closeMessage} />
+      <div className="display-animal my-5">
+        {selectedAnimal && (
+          <ViewAnimal animal={selectedAnimal} closeAnimal={closeAnimal} />
         )}
       </div>
       <table className="table">
         <thead>
           <tr>
-            <th style={{ width: "5%" }} aria-label="Identifiant du message">
+            <th style={{ width: "5%" }} aria-label="Identifiant de l'animal">
               Id
             </th>
-            <th style={{ width: "15%" }} aria-label="Nom du message">
+            <th style={{ width: "15%" }} aria-label="Nom de l'animal">
               Nom
             </th>
             <th style={{ width: "15%" }} aria-label="Email de l'auteur">
-              Email
+              Santé
             </th>
-            <th style={{ width: "20%" }} aria-label="Contenu du message">
-              Contenu
+            <th style={{ width: "20%" }} aria-label="Contenu de l'animal">
+              Soins
             </th>
             <th style={{ width: "15%" }} aria-label="Date de création">
-              Date
-            </th>
-            <th style={{ width: "15%" }} aria-label="Téléphone de l'auteur">
-              Téléphone
+              Alim.
             </th>
             <th style={{ width: "15%" }} aria-label="Actions">
               Action
@@ -80,39 +77,37 @@ const BackMessage = () => {
           </tr>
         </thead>
         <tbody>
-          {messages &&
-            messages.map((message) => (
-              <tr key={message.id}>
-                <td>{message.id}</td>
-                <td>{message.name}</td>
-                <td>{message.email}</td>
-                <td>{message.content}</td>
-                <td>{formatDate(message.date)}</td>
-                <td>{message.phone}</td>
-
+          {animaux &&
+            animaux.map((animal) => (
+              <tr key={animal.ID_animaux}>
+                <td>{animal.ID_animaux}</td>
+                <td>{animal.TITLE}</td>
+                <td>{animal.SANTE}</td>
+                <td>{animal.SOIN}</td>
+                <td>{animal.alim}</td>
                 <td>
                   <button
                     className="btn btn-success mx-1"
-                    key={message.id + message.name}
-                    onClick={() => handleRowClick(message)}
+                    key={animal.ID_animaux + animal.name}
+                    onClick={() => handleRowClick(animal)}
                   >
                     Voir
                   </button>
                   <Link
-                    to={`/deleteOneMessage/${message.id}`}
+                    to={`/editAnimal/${animal.ID_animaux}`}
                     className="btn btn-danger"
-                    aria-label="Effacer Message"
+                    aria-label="Modifier Animal"
                   >
-                    Effacer
+                    Modifier
                   </Link>
                 </td>
               </tr>
             ))}
 
-          {messages && !messages.length && (
+          {animaux && !animaux.length && (
             <tr>
               <td>
-                <p>Pas de message à afficher</p>
+                <p>Pas d'animal à afficher</p>
               </td>
             </tr>
           )}
@@ -122,4 +117,4 @@ const BackMessage = () => {
   );
 };
 
-export default BackMessage;
+export default BackAnimal;
