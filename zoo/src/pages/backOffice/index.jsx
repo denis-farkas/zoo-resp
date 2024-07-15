@@ -1,9 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import "./backOffice.css";
 
 const BackOffice = () => {
-  let actualUser = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
+  let actualUser = JSON.parse(localStorage.getItem("user"));
+
+  useEffect(() => {
+    if (
+      actualUser === null ||
+      (actualUser.role !== "admin" && actualUser.role !== "veto")
+    ) {
+      navigate("/");
+    }
+  }, [actualUser, navigate]);
+
   if (actualUser !== null && actualUser.role === "admin") {
     return (
       <div className="main-table">
@@ -61,7 +72,7 @@ const BackOffice = () => {
       </div>
     );
   } else {
-    navigate("/");
+    return null;
   }
 };
 
