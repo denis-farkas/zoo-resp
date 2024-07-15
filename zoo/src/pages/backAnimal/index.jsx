@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, act } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import ViewAnimal from "../../components/viewAnimal";
@@ -6,15 +6,9 @@ import ViewAnimal from "../../components/viewAnimal";
 const BackAnimal = () => {
   const [animaux, setAnimaux] = useState(null);
   const [selectedAnimal, setSelectedAnimal] = useState(null);
+
   let actualUser = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
-  if (
-    actualUser === null ||
-    actualUser.role !== "admin" ||
-    actualUser.role !== "veto"
-  ) {
-    navigate("/");
-  }
 
   const handleRowClick = (animal) => {
     setSelectedAnimal(animal);
@@ -25,6 +19,13 @@ const BackAnimal = () => {
   };
 
   useEffect(() => {
+    if (
+      !actualUser ||
+      (actualUser.role !== "admin" && actualUser.role !== "veto")
+    ) {
+      navigate("/");
+      return;
+    }
     const API_URL = "http://localhost:3001";
 
     let config = {
@@ -44,7 +45,7 @@ const BackAnimal = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [actualUser, navigate]);
 
   return (
     <div className="main-table">

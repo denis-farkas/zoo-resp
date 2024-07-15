@@ -9,13 +9,6 @@ const BackAvis = () => {
 
   let actualUser = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
-  if (
-    actualUser === null ||
-    actualUser.role !== "admin" ||
-    actualUser.role !== "veto"
-  ) {
-    navigate("/");
-  }
 
   const handleRowClick = (avis) => {
     setSelectedAvis(avis);
@@ -26,6 +19,14 @@ const BackAvis = () => {
   };
 
   useEffect(() => {
+    if (
+      !actualUser ||
+      (actualUser.role !== "admin" && actualUser.role !== "veto")
+    ) {
+      navigate("/");
+      return;
+    }
+
     const API_URL = "http://localhost:3001";
 
     let config = {
@@ -45,7 +46,7 @@ const BackAvis = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [actualUser, navigate]);
 
   return (
     <div className="main-table">
