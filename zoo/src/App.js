@@ -12,22 +12,23 @@ import Soigneur from "./pages/Soigneur";
 import Actualite from "./pages/Actualite";
 import Mission from "./pages/Mission";
 import Animal from "./pages/Animal";
-import "./App.css";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import SignIn from "./pages/signIn";
 import SignUp from "./pages/signUp";
 import UserProfile from "./pages/userProfile";
 import BackOffice from "./pages/backOffice";
 import BackUser from "./pages/backUser";
 import EditUser from "./pages/editUser";
-
-
+import BackMessage from "./pages/backMessage";
+import BackAvis from "./pages/backAvis";
+import DeleteMessage from "./components/DeleteMessage";
+import DeleteAvis from "./components/DeleteAvis";
+import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Header />
         <Routes>
@@ -36,7 +37,7 @@ function App() {
           <Route path="/avis" element={<Avis />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/habitats" element={<Habitats />} />
-          <Route path="/habitat/:id_habitat" element={<Habitat />} />   
+          <Route path="/habitat/:id_habitat" element={<Habitat />} />
           <Route path="/soigneur" element={<Soigneur />} />
           <Route path="/histoire" element={<Histoire />} />
           <Route path="/actualite" element={<Actualite />} />
@@ -47,21 +48,27 @@ function App() {
           <Route path="/userProfile" element={<UserProfile />} />
           <Route path="/backOffice" element={<BackOffice />} />
           <Route path="/backUser" element={<BackUser />} />
+          <Route path="/backMessage" element={<BackMessage />} />
+          <Route path="/deleteOneMessage/:id" element={<DeleteMessage />} />
+          <Route path="/backAvis" element={<BackAvis />} />
+          <Route path="/deleteOneAvis/:id" element={<DeleteAvis />} />
           <Route path={`/editUser/:id`} element={<EditUser />} />
           <Route path="*" element={<p>Error 404</p>} />
         </Routes>
 
         <Footer />
 
-        <ToastContainer position="top-center"
-            autoClose={1000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover />
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </Router>
     </div>
   );

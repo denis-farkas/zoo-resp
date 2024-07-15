@@ -11,7 +11,7 @@ const Habitat = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:3000/api/habitats",
+      url: "http://localhost:3001/api/habitats",
       headers: {
         "Content-Type": "application/json",
       },
@@ -27,7 +27,7 @@ const Habitat = () => {
   }, []);
 
   return (
-    <div className="container section-habitat">
+    <div className="container-habitat section-habitat">
       <div className="section-habitat-left">
         {habitats &&
           habitats

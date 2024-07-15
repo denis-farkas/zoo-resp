@@ -10,7 +10,7 @@ const Habitats = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:3000/api/habitats",
+      url: "http://localhost:3001/api/habitats",
       headers: {
         "Content-Type": "application/json",
       },

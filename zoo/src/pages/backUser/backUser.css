@@ -1,1 +1,9 @@
-/*# sourceMappingURL=backUser.css.map */
+.main-table {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px;
+}

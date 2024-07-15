@@ -11,7 +11,7 @@ const Mission = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:3000/api/mission",
+      url: "http://localhost:3001/api/mission",
       headers: {
         "Content-Type": "application/json",
       },

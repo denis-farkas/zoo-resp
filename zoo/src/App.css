@@ -2,16 +2,55 @@ a {
   text-decoration: none;
 }
 
-.app {
-  width: 100vw;
-}
-
 .full-height {
   height: auto;
 }
 
+.formGroup {
+  width: 80%;
+  margin: 40px auto;
+}
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
 @media only screen and (max-width: 1180px) {
   .full-height {
     height: auto;
+  }
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.container-fluid {
+  --bs-gutter-x: 5rem;
+  --bs-gutter-y: 0;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+@media screen and (max-width: 576px) {
+  .container-fluid {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 0;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
   }
 }

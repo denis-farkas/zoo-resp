@@ -3,12 +3,12 @@ import cors from "cors";
 import initRoutes from "../src/routes/init.routes.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      const allowedOrigins = ["http://localhost:3001"];
+      const allowedOrigins = ["http://localhost:3000"];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {

@@ -1,94 +1,120 @@
-import "./avis.css"
-import React, { useState } from 'react';
+import "./avis.css";
+import React, { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import formatDate from "../../utils/formatDate.js";
 
-function AvisForm() {
-  const [pseudo, setPseudo] = useState('');
-  const [avis, setAvis] = useState('');
-  const [avisList, setAvisList] = useState([]);
+const Avis = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    content: "",
+    date: formatDate(Date.now()),
+  });
+  let navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newAvis = { pseudo, avis, status: 'pending' };
-    setAvisList([...avisList, newAvis]);
-    setPseudo('');
-    setAvis('');
-  };
 
-  const handleStatusChange = (index, newStatus) => {
-    const updatedAvisList = avisList.map((item, i) =>
-      i === index ? { ...item, status: newStatus } : item
-    );
-    setAvisList(updatedAvisList);
+    const API_URL = "http://localhost:3001";
+
+    let { name, email, content, date } = formData;
+    let data = JSON.stringify({ name, email, content, date });
+
+    let config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: `${API_URL}/api/createAvis`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(response);
+        if (response.status === 201) {
+          console.log("Response succeeded!");
+
+          toast.success("Avis envoyé avec succès");
+          setTimeout(() => {
+            navigate("/");
+          }, 3000);
+        }
+      })
+      .catch((error) => {
+        const errorMessage = error.response
+          ? error.response.data.message || "An error occurred"
+          : "An error occurred";
+        toast.error(errorMessage);
+      });
   };
 
   return (
-    <div className="first-title-formulaire-avis">
-      <h1 className="title-formulaire-avis">Formulaire d'Avis</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="text-formulaire-pseudo">
-          <label>
-            Pseudo:
-            <input
-              type="text"
-              value={pseudo}
-              onChange={(e) => setPseudo(e.target.value)}
-              required
-            />
+    <div className="main-table">
+      <div className="center">
+        <h2>Formulaire d'Avis</h2>
+      </div>
+      <form className="formGroup" onSubmit={handleSubmit}>
+        <div className="col-sm-6 mx-auto ">
+          <label className="form-label mt-4" htmlFor="name">
+            Nom:
           </label>
+          <input
+            className="form-control"
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <div className="avis-formulaire-avis">
-          <label>
+        <div className="col-sm-6 mx-auto">
+          <label className="form-label mt-4" htmlFor="email">
+            Email:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col-sm-6 mx-auto">
+          <label className="form-label mt-4" htmlFor="content">
             Avis:
-            <textarea
-              value={avis}
-              onChange={(e) => setAvis(e.target.value)}
-              required
-            />
           </label>
+          <textarea
+            id="content"
+            className="form-control"
+            name="content"
+            value={formData.content}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <div className="soumettre">
-        <button type="submit">Soumettre</button>
+        <div className="center">
+          <button className="btn btn-primary my-4 mx-auto" type="submit">
+            Soumettre
+          </button>
         </div>
       </form>
-      <h2 className="liste-avis">Liste des Avis</h2>
-      <ul className="index">
-        {avisList.map((item, index) => (
-          <li key={index}>
-            <strong>{item.pseudo}</strong>: {item.avis} (Status: {item.status})
-            <button onClick={() => handleStatusChange(index, 'accepted')}>Accepter</button>
-            <button onClick={() => handleStatusChange(index, 'refused')}>Refuser</button>
-            <button onClick={() => handleStatusChange(index, 'diffused')}>Diffuser</button>
-          </li>
-          
-        ))}
-      </ul>
     </div>
-   
-    
-    
   );
-}
+};
 
-export default AvisForm;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-  
-              
-  
-
-
+export default Avis;

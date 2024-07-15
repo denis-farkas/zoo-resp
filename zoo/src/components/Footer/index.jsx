@@ -89,7 +89,9 @@ const Footer = () => {
                 <li className="nav-item">
                   <NavLink
                     to={"/backOffice"}
-                    className={({ isActive }) => (isActive ? "active" : "none")}
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
                   >
                     Espace Admin
                   </NavLink>

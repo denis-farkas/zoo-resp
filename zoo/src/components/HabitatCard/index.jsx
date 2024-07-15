@@ -1,6 +1,7 @@
 import React from "react";
 import "./habitat-card.css";
 import { Link } from "react-router-dom";
+
 const HabitatCard = ({ habitat }) => {
   return (
     <div className="card  mb-3 habitat-card">
