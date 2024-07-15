@@ -9,13 +9,8 @@ const BackMessage = () => {
   const [selectedMessage, setSelectedMessage] = useState(null);
   let actualUser = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
-  if (
-    actualUser === null ||
-    actualUser.role !== "admin" ||
-    actualUser.role !== "veto"
-  ) {
-    navigate("/");
-  }
+  console.log(actualUser);
+
   const handleRowClick = (message) => {
     setSelectedMessage(message);
   };
@@ -25,8 +20,15 @@ const BackMessage = () => {
   };
 
   useEffect(() => {
-    const API_URL = "http://localhost:3001";
+    if (
+      !actualUser ||
+      (actualUser.role !== "admin" && actualUser.role !== "veto")
+    ) {
+      navigate("/");
+      return;
+    }
 
+    const API_URL = "http://localhost:3001";
     let config = {
       method: "get",
       maxBodyLength: Infinity,
@@ -44,7 +46,7 @@ const BackMessage = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [actualUser, navigate]);
 
   return (
     <div className="main-table">
@@ -89,7 +91,6 @@ const BackMessage = () => {
                 <td>{message.content}</td>
                 <td>{formatDate(message.date)}</td>
                 <td>{message.phone}</td>
-
                 <td>
                   <button
                     className="btn btn-success mx-1"
@@ -108,10 +109,9 @@ const BackMessage = () => {
                 </td>
               </tr>
             ))}
-
           {messages && !messages.length && (
             <tr>
-              <td>
+              <td colSpan="7">
                 <p>Pas de message à afficher</p>
               </td>
             </tr>

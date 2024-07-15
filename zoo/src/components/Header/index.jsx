@@ -34,7 +34,7 @@ const Header = () => {
           <div className="logo">
             <NavLink className="navbar-brand" to="/">
               <img
-                src="logoimg.png"
+                src="/image/logoimg.png"
                 className="logo-img"
                 alt="Zoo de Brocéliande"
               />
